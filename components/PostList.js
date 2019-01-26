@@ -39,6 +39,7 @@ export default function PostList() {
   return (
     <Query query={allPostsQuery} variables={allPostsQueryVars} ssr={false}>
       {({
+        client,
         loading,
         error,
         data: { allPosts, _allPostsMeta, filters },
